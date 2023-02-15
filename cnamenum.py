@@ -79,8 +79,8 @@ if __name__ == '__main__':
         print(parser.format_help().lower())
 
     if domain_list:
-        for domains in open(str(domain_list), 'r').readlines():
-            enum.find_cname(domains.strip())
+        for domains in open(domain_list, encoding='utf-8').read().splitlines():
+            enum.find_cname(domains)
 
     if domain:
         enum.find_cname(domain)
