@@ -74,6 +74,9 @@ if __name__ == '__main__':
     verbose = args.verbose
 
     enum = Enumerators(verbose)
+    
+    if not (domain or domain_list):
+        print(parser.format_help().lower())
 
     if domain_list:
         for domains in open(str(domain_list), 'r').readlines():
