@@ -81,3 +81,4 @@ if __name__ == '__main__':
 
     if domain:
         enum.find_cname(domain)
+        
