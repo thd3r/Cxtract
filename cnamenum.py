@@ -9,7 +9,7 @@ import argparse
 
 import dns.resolver
 
-class Enumerators:
+class Cxtract:
 
     pattern = re.compile(
         r'^(?:[a-zA-Z0-9]'  # First character of the domain
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     domain_list = args.domain_list
     verbose = args.verbose
 
-    enum = Enumerators(verbose)
+    enum = Cxtract(verbose)
     
     if not (domain or domain_list):
         print(parser.format_help().lower())
